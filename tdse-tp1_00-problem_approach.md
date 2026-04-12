@@ -15,11 +15,11 @@ El sistema se organiza en tres módulos principales, ejecutados periódicamente 
 Para la implementación en laboratorio, los dispositivos reales pueden ser reemplazados por entradas y salidas digitales:
 
 Entradas (Digital Inputs):
-Sensor de vehículo -> pulsador o DIP switch
-Botón de ticket -> pulsador
-Cámara / identificación -> DIP switch
+- Sensor de vehículo -> pulsador o DIP switch
+- Botón de ticket -> pulsador
+- Cámara / identificación -> DIP switch
 
 Salidas (Digital Outputs):
-Impresora -> LED
-Barrera -> LED
-Display / sistema -> LED
+- Impresora -> LED
+- Barrera -> LED
+- Display / sistema -> LED
