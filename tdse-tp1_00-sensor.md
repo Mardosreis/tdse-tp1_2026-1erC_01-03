@@ -10,7 +10,7 @@ El botón binario genera dos eventos principales asociados a su posición físic
   
 Estos eventos accionan transiciones en la máquina de estados del Sensor.
 
----
+--
 
 ###  Acciones del Sensor
 Las acciones reflejan cambios de posición del botón y pueden ser:
