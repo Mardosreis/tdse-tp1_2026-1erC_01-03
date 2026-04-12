@@ -6,9 +6,9 @@
 ## *Parking Ticket Dispenser Machine (Entry)*
 El sistema se organiza en tres módulos principales, ejecutados periódicamente con un período de 1 ms (Update by Time Code):
 
-Módulo Sensor: se modela como un sistema de muestreo periódico (polling), encargado de leer las entradas digitales en cada ciclo de ejecución.
-Módulo System: se modela mediante una máquina de estados finitos (FSM), que define el comportamiento del sistema y las transiciones entre estados en función de las entradas y del estado actual.
-Módulo Actuator: se modela como lógica de salida dependiente del estado del sistema, encargada de accionar los dispositivos físicos.
+- Módulo Sensor: se modela como un sistema de muestreo periódico (polling), encargado de leer las entradas digitales en cada ciclo de ejecución.
+- Módulo System: se modela mediante una máquina de estados finitos (FSM), que define el comportamiento del sistema y las transiciones entre estados en función de las entradas y del estado actual.
+- Módulo Actuator: se modela como lógica de salida dependiente del estado del sistema, encargada de accionar los dispositivos físicos.
 
 
 
