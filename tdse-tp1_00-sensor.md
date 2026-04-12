@@ -1,31 +1,24 @@
 ## Modelo Sensor (un solo botón)
 
-El modelo Sensor se implementa como un módulo temporizado (Update by Time Code, período = 1 ms) que escruta el estado de un pulsador binario.  
-Se definen **Eventos** y **Acciones** siguiendo la convención:
+El modelo Sensor se implementa como un módulo temporizado (Update by Time Code, período = 1 ms) que escruta el estado de un pulsador binario, definiendo eventos y acciones.  
 
-- `event => EV_BTN_NAME`
-- `state => ST_BTN_NAME`
-- `signal => EV_SYS_NAME`
-- `timer => tick // 0, DEL_BTN_NAME`
-
----
-
-### 📌 Eventos del Sensor
+###  Eventos del Sensor
 El botón binario genera dos eventos principales asociados a su posición física:
 
-- **EV_BTN_UP** → el botón está en posición *no presionado*.  
-- **EV_BTN_DOWN** → el botón está en posición *presionado*.  
-
-Estos eventos son los *triggers* que disparan transiciones en la máquina de estados del Sensor.
+- **EV_BTN_UP** -> el botón está en posición *no presionado*.  
+- **EV_BTN_DOWN** -> el botón está en posición *presionado*.  
+- **EV_BTN_FALLING** -> el botón está en posición *presionado*.
+  
+Estos eventos accionan transiciones en la máquina de estados del Sensor.
 
 ---
 
-### ⚙️ Acciones del Sensor
+###  Acciones del Sensor
 Las acciones reflejan cambios de posición del botón y pueden ser:
 
 - **Inicialización / modificación de variables de control**  
-  - `tick = DEL_BTN_MAX` → al detectar transición hacia *falling*, se inicializa el temporizador de debounce.  
-  - `tick--` → decremento periódico del temporizador mientras se mantiene en estado transitorio.
+  - tick = DEL_BTN_MAX → al detectar transición hacia falling, se inicializa el temporizador de debounce.  
+  - tick-- → decremento periódico del temporizador mientras se mantiene en estado transitorio.
 
 - **Generación de señales hacia el System**  
   - `raise EV_SYS_BTN_DOWN` → notifica al módulo System que el botón fue presionado de manera válida.  
