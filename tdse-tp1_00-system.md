@@ -31,17 +31,7 @@ Los eventos son los triggers que disparan transiciones en la FSM del System:
 
 ---
 
-###  Ejemplo de Transiciones 
-| Estado Actual   | Evento             | [Guard]       | Estado Siguiente | Acción                        |
-|-----------------|--------------------|---------------|-----------------|-------------------------------|
-| ST_IDLE         | EV_SYS_BTN_DOWN    |               | ST_TICKET_ISSUE | raise EV_ACT_PRINT, ticket_ready=true |
-| ST_TICKET_ISSUE | EV_SYS_TICKET_VALID|               | ST_WAIT_PAYMENT | tick = DEL_SYS_MAX            |
-| ST_WAIT_PAYMENT | EV_SYS_PAYMENT_OK  | [tick>0]      | ST_EXIT_READY   | raise EV_ACT_BARRIER_OPEN     |
-| ST_EXIT_READY   | EV_SYS_BTN_UP      |               | ST_IDLE         | barrier_open=false             |
-
----
-
-## 📋 Tabla de Estados y Excitaciones – Modelo System
+##  Tabla de Estados y Excitaciones – Modelo System
 
 | Estado Actual          | Evento / Condición       | [Guard]        | Próximo Estado        | Acciones                                                                 |
 |------------------------|--------------------------|----------------|-----------------------|--------------------------------------------------------------------------|
