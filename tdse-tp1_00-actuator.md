@@ -27,7 +27,7 @@ Los estados representan las fases operativas del LED:
 
 ---
 
-## 📋 Tabla de Estados y Excitaciones – Modelo Actuator
+## Tabla de Estados y Excitaciones – Modelo Actuator
 
 | Estado Actual     | Evento / Condición   | [Guard]        | Próximo Estado   | Acciones                                                                 |
 |-------------------|----------------------|----------------|------------------|--------------------------------------------------------------------------|
